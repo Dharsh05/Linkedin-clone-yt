@@ -1,0 +1,55 @@
+.header{
+    /* to keep the header as you scroll down */
+    position:sticky;
+    top: 0;
+    /* display flex keep everything into a line */
+    display:flex;
+    flex-direction: row;
+    /* Gives space */
+    justify-content: space-evenly;
+    border-bottom: 0.1px solid lightgray;
+    /* to give padding at top and bottom */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width:100%;
+    /* zindex works with position */
+    z-index: 999;
+    
+    
+}
+/* previously the search bar was below the icon
+adding flex will push it up and keep it inline */
+.header__left{
+    display: flex;
+}
+/* header left target the image */
+.header__left > img {
+    /* when i resize the image it will keep the aspect ratio */
+    object-fit: contain; 
+    height: 40px;
+    margin-right: 10px;
+    
+}
+
+/* this focuses on the icon */
+.header__search{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius:5px;
+    height: 22px;
+    color:gray;
+    background-color: #eef3f8;
+}
+/* this changes the input boder to no fill */
+.header__search > input {
+    /* outline gets rid of the box when u click or type on it */
+    outline: none;
+    border: none;
+    background: none;
+
+}
+
+.header__right{
+    display: flex;
+}
